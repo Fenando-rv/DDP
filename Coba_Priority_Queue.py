@@ -19,4 +19,12 @@ class PriorityQueue:
 
     def size(self):
         return len(self.items)
-
+    
+    def display_all(self):
+        # Menampilkan seluruh elemen dalam queue
+        if not self.is_empty():
+            for item, priority in self.items:
+                print(f"Item: {item}, Prioritas: {priority}")
+        else:
+            print("Queue kosong.")
+#Coba Penggunaan
