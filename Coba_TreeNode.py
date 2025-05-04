@@ -9,7 +9,8 @@ class TreeNode:
         self.children.append(child)
 
 def print_tree(node, level=0):
-    print(' ' * level * 4 + str(node.data))
+    indent = ' ' * 4 * level + ('└── ' if level > 0 else '')
+    print(indent + str(node.data))
     for child in node.children:
         print_tree(child, level + 1)
 
