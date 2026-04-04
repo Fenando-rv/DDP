@@ -103,3 +103,4 @@ class LinkedList:
             print(current.data, end=" -> " if current.next else "")
             current = current.next
         print()
+#Membuat Objek Linkedlist
