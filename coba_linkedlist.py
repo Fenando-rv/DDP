@@ -11,6 +11,17 @@ class LinkedList:
         new_node = Node(data)
         new_node.next = self.head
         self.head = new_node
+    
+    def add_at_end(self, data):
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+            return
+        
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = new_node
 
     # 1. INSERT AFTER (Sudah ada di kode kamu)
     def insert_after(self, prev_data, new_data):
@@ -93,7 +104,8 @@ class LinkedList:
             position += 1
         print(f"Data {key} tidak ditemukan.")
         return False
-
+    
+    # 6. Traverse
     def traverse(self):
         current = self.head
         if not current:
@@ -103,4 +115,5 @@ class LinkedList:
             print(current.data, end=" -> " if current.next else "")
             current = current.next
         print()
+
 #Membuat Objek Linkedlist
