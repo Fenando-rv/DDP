@@ -21,3 +21,4 @@ class Queue:
     
     def traverse(self):
         return self.items
+# Contoh penggunaan 
